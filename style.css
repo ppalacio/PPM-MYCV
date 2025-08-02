@@ -30,8 +30,24 @@ body, button { font-family:'Inter',sans-serif; color:var(--text); background:var
 #content { padding:2rem; }
 #content section { margin-bottom:2rem; opacity:0; transform:translateY(20px); transition:opacity .6s, transform .6s; }
 #content h2 { font-weight:500; color:var(--accent); border-bottom:2px solid var(--accent); margin-bottom:1rem; padding-bottom:.3rem; }
-#content ul { list-style:none; margin-left:1rem; }
-#content ul.columns { columns:2; column-gap:2rem; }
+#content ul:not(.columns) {
+  list-style: none;
+  margin-left: 1rem;
+}
+#education ul.columns {
+  list-style: disc inside;
+  margin-left: 1rem;
+  font-size: 1rem;
+  columns: 2;
+  column-gap: 2rem;
+}
+#education h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .timeline .entry { border-left:3px solid var(--accent); padding-left:1rem; margin-bottom:1.5rem; position:relative; }
 .timeline .entry::before { content:''; width:10px; height:10px; background:var(--accent); border-radius:50%; position:absolute; left:-6px; top:5px; }
 
